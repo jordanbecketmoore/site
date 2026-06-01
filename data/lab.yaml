@@ -1,0 +1,19 @@
+updated: "2026-06-01"
+
+stats:
+  - label: "Nodes"
+    value: "3"
+  - label: "Services"
+    value: "14"
+  - label: "Storage"
+    value: "12 TB"
+  - label: "Uptime"
+    value: "99.7%"
+
+services:
+  - name: Proxmox
+    url: ""
+  - name: Jellyfin
+    url: ""
+  - name: Gitea
+    url: ""

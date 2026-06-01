@@ -1,0 +1,57 @@
+baseURL = "https://moorelab.dev/"
+locale = "en-us"
+title = "MooreLab"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+buildDrafts = false
+
+[params]
+  author = "Jordan Moore"
+  description = "Home server infrastructure, dev tooling, and lab notes."
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  defaultTheme = "dark"
+
+  [params.profileMode]
+    enabled = true
+    title = "MooreLab"
+    subtitle = "Home server infrastructure, dev tooling, and lab notes."
+
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/blog"
+
+    [[params.profileMode.buttons]]
+      name = "Lab"
+      url = "/lab"
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 10
+
+[[menu.main]]
+  name = "Lab"
+  url = "/lab/"
+  weight = 20
+
+[[menu.main]]
+  name = "Links"
+  url = "/links/"
+  weight = 30
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

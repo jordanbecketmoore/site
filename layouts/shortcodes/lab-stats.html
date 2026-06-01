@@ -1,0 +1,71 @@
+{{ $lab := hugo.Data.lab }}
+<div class="lab-stats">
+  <div class="lab-stat-grid">
+    {{ range $lab.stats }}
+    <div class="lab-stat-card">
+      <span class="lab-stat-value">{{ .value }}</span>
+      <span class="lab-stat-label">{{ .label }}</span>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ if $lab.services }}
+  <h3>Services</h3>
+  <ul class="lab-services">
+    {{ range $lab.services }}
+    <li>
+      {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
+  <p class="lab-updated"><small>Last updated: {{ $lab.updated }}</small></p>
+</div>
+
+<style>
+.lab-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.lab-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--entry);
+}
+.lab-stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.lab-stat-label {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+.lab-services {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lab-services li {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.lab-updated {
+  margin-top: 1.5rem;
+  color: var(--secondary);
+}
+</style>
