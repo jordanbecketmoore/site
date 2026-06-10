@@ -30,6 +30,10 @@ buildDrafts = false
       name = "Lab"
       url = "/lab"
 
+    [[params.profileMode.buttons]]
+      name = "GitHub"
+      url = "https://github.com/jordanbecketmoore/"
+
 [[menu.main]]
   name = "Blog"
   url = "/blog/"
