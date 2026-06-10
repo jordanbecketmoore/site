@@ -19,8 +19,8 @@ buildDrafts = false
 
   [params.profileMode]
     enabled = true
-    title = "MooreLab"
-    subtitle = "Home server infrastructure, dev tooling, and lab notes."
+    title = "Jordan Moore"
+    subtitle = "Cloud Platform Engineer — Kubernetes, AWS/GCP, and infrastructure automation."
 
     [[params.profileMode.buttons]]
       name = "Blog"
@@ -33,6 +33,10 @@ buildDrafts = false
     [[params.profileMode.buttons]]
       name = "GitHub"
       url = "https://github.com/jordanbecketmoore/"
+
+    [[params.profileMode.buttons]]
+      name = "LinkedIn"
+      url = "https://www.linkedin.com/in/jordan-moore-4aa009226/"
 
 [[menu.main]]
   name = "Blog"
